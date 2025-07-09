@@ -6,8 +6,41 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4EBE18112E16BCB000D6BF18 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBE18102E16BCB000D6BF18 /* WidgetKit.framework */; };
+		4EBE18132E16BCB000D6BF18 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBE18122E16BCB000D6BF18 /* SwiftUI.framework */; };
+		4EBE18242E16BCB200D6BF18 /* widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4EBE180E2E16BCB000D6BF18 /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4EBE18222E16BCB200D6BF18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EBE17EA2E16BC5E00D6BF18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EBE180D2E16BCB000D6BF18;
+			remoteInfo = widgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4EBE18292E16BCB200D6BF18 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4EBE18242E16BCB200D6BF18 /* widgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4EBE17F22E16BC5E00D6BF18 /* helloudp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = helloudp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EBE180E2E16BCB000D6BF18 /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EBE18102E16BCB000D6BF18 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4EBE18122E16BCB000D6BF18 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -17,6 +50,13 @@
 				Info.plist,
 			);
 			target = 4EBE17F12E16BC5E00D6BF18 /* helloudp */;
+		};
+		4EBE18282E16BCB200D6BF18 /* Exceptions for "widget" folder in "widgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 4EBE180D2E16BCB000D6BF18 /* widgetExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -29,6 +69,14 @@
 			path = helloudp;
 			sourceTree = "<group>";
 		};
+		4EBE18142E16BCB000D6BF18 /* widget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4EBE18282E16BCB200D6BF18 /* Exceptions for "widget" folder in "widgetExtension" target */,
+			);
+			path = widget;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +87,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EBE180B2E16BCB000D6BF18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBE18132E16BCB000D6BF18 /* SwiftUI.framework in Frameworks */,
+				4EBE18112E16BCB000D6BF18 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				4EBE17F42E16BC5E00D6BF18 /* helloudp */,
+				4EBE18142E16BCB000D6BF18 /* widget */,
+				4EBE180F2E16BCB000D6BF18 /* Frameworks */,
 				4EBE17F32E16BC5E00D6BF18 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,8 +113,18 @@
 			isa = PBXGroup;
 			children = (
 				4EBE17F22E16BC5E00D6BF18 /* helloudp.app */,
+				4EBE180E2E16BCB000D6BF18 /* widgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4EBE180F2E16BCB000D6BF18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EBE18102E16BCB000D6BF18 /* WidgetKit.framework */,
+				4EBE18122E16BCB000D6BF18 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,10 +137,12 @@
 				4EBE17EE2E16BC5E00D6BF18 /* Sources */,
 				4EBE17EF2E16BC5E00D6BF18 /* Frameworks */,
 				4EBE17F02E16BC5E00D6BF18 /* Resources */,
+				4EBE18292E16BCB200D6BF18 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4EBE18232E16BCB200D6BF18 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				4EBE17F42E16BC5E00D6BF18 /* helloudp */,
@@ -82,6 +153,28 @@
 			productName = helloudp;
 			productReference = 4EBE17F22E16BC5E00D6BF18 /* helloudp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4EBE180D2E16BCB000D6BF18 /* widgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EBE18252E16BCB200D6BF18 /* Build configuration list for PBXNativeTarget "widgetExtension" */;
+			buildPhases = (
+				4EBE180A2E16BCB000D6BF18 /* Sources */,
+				4EBE180B2E16BCB000D6BF18 /* Frameworks */,
+				4EBE180C2E16BCB000D6BF18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4EBE18142E16BCB000D6BF18 /* widget */,
+			);
+			name = widgetExtension;
+			packageProductDependencies = (
+			);
+			productName = widgetExtension;
+			productReference = 4EBE180E2E16BCB000D6BF18 /* widgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -94,6 +187,9 @@
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					4EBE17F12E16BC5E00D6BF18 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					4EBE180D2E16BCB000D6BF18 = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
@@ -113,12 +209,20 @@
 			projectRoot = "";
 			targets = (
 				4EBE17F12E16BC5E00D6BF18 /* helloudp */,
+				4EBE180D2E16BCB000D6BF18 /* widgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4EBE17F02E16BC5E00D6BF18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EBE180C2E16BCB000D6BF18 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,7 +239,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EBE180A2E16BCB000D6BF18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EBE18232E16BCB200D6BF18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EBE180D2E16BCB000D6BF18 /* widgetExtension */;
+			targetProxy = 4EBE18222E16BCB200D6BF18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4EBE18062E16BC6000D6BF18 /* Debug */ = {
@@ -160,6 +279,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.lative.helloudp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -188,6 +311,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.lative.helloudp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,6 +442,60 @@
 			};
 			name = Release;
 		};
+		4EBE18262E16BCB200D6BF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4H3NSYH96J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.lative.helloudp.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4EBE18272E16BCB200D6BF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4H3NSYH96J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.lative.helloudp.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -332,6 +513,15 @@
 			buildConfigurations = (
 				4EBE18062E16BC6000D6BF18 /* Debug */,
 				4EBE18072E16BC6000D6BF18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EBE18252E16BCB200D6BF18 /* Build configuration list for PBXNativeTarget "widgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EBE18262E16BCB200D6BF18 /* Debug */,
+				4EBE18272E16BCB200D6BF18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
